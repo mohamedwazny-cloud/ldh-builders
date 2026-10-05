@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Projects Gallery - Lanka Dream Homes Builders</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Base styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #0b0b0b; color: #fff; line-height: 1.6; }
+
+    /* Header */
+    header { padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 100; background: rgba(0, 0, 0, 0.9); border-bottom: 1px solid rgba(255, 42, 42, 0.2); }
+    header h1 { font-size: 1.2rem; font-weight: 700; color: #ff2a2a; letter-spacing: 1px; }
+    nav a { color: #fff; margin-left: 25px; text-decoration: none; font-weight: 500; transition: 0.3s; font-size: 0.95rem; }
+    nav a:hover { color: #ff2a2a; }
+
+    /* Page Header */
+    .page-header { padding: 150px 10% 80px; text-align: center; background: linear-gradient(rgba(10, 0, 0, 0.8), rgba(40, 0, 0, 0.8)), url('idh_builders_bg.jpg') center/cover; }
+    .page-header h2 { font-size: 3rem; color: #ffffff; text-transform: uppercase; margin-bottom: 10px; font-weight: 800; display: inline-block; padding: 15px 30px; background: rgba(0, 0, 0, 0.4); }
+    .page-header p { font-size: 1.2rem; color: #ddd; margin-top: 20px; }
+
+    /* Content */
+    .content-section { padding: 80px 10%; background: #ffffff; color: #111; min-height: 50vh; text-align: center; }
+    .content-section h3 { font-size: 2.5rem; text-transform: uppercase; margin-bottom: 20px; font-weight: 800; }
+    .content-section>p { font-size: 1.1rem; color: #555; margin-bottom: 50px; }
+
+    /* Gallery Grid */
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+    .gallery-item { background: #f9f9f9; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid #eee; text-align: left; transition: transform 0.3s; }
+    .gallery-item:hover { transform: translateY(-10px); }
+    .gallery-img-placeholder { width: 100%; height: 250px; background: #e0e0e0; display: flex; align-items: center; justify-content: center; color: #888; font-size: 1.2rem; }
+    .gallery-info { padding: 25px; }
+    .gallery-info h4 { font-size: 1.3rem; color: #aa0000; margin-bottom: 10px; }
+    .gallery-info p { color: #555; font-size: 0.95rem; line-height: 1.6; }
+
+    /* Back button */
+    .back-btn { display: inline-block; margin-top: 50px; padding: 12px 30px; background: #111; color: #fff; text-decoration: none; border-radius: 4px; transition: 0.3s; font-weight: 600; }
+    .back-btn:hover { background: #ff2a2a; }
+
+    /* Footer */
+    footer { text-align: center; padding: 25px; background: #050505; color: #666; font-size: 0.9rem; border-top: 1px solid #1a1a1a; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      header { flex-direction: column; padding: 15px; }
+      nav { margin-top: 15px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+      nav a { margin: 0; }
+      .page-header h2 { font-size: 2rem; }
+    }
+
+    .contact-widget {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 1000;
+    }
+    .contact-widget a {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: 0.3s;
+    }
+    .widget-whatsapp { background: #25d366; }
+    .widget-email { background: #ff2a2a; }
+    .contact-widget a:hover { transform: scale(1.1); }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Lanka Dream Homes Builders (Pvt) Ltd</h1>
+    <nav>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="page-header">
+    <h2>All Completed Projects</h2>
+    <p>A complete showcase of our successful builds.</p>
+  </div>
+
+  <section class="content-section">
+    <h3>Project Gallery</h3>
+    <p>Browse through our extensive portfolio of architectural and construction achievements.</p>
+
+    <div class="gallery-grid">
+      <!-- Gallery Item 1 -->
+      <div class="gallery-item">
+        <img src="assets/38.jpg" alt="Residential Villa" class="gallery-img-placeholder" style="object-fit: cover;">
+        <div class="gallery-info">
+          <h4>Residential Villa</h4>
+          <p>This is a placeholder description for the completed project. Describe the location, duration, and key architectural features here.</p>
+        </div>
+      </div>
+
+      <!-- Gallery Item 2 -->
+      <div class="gallery-item">
+        <img src="assets/24.jpg" alt="Commercial Office Complex" class="gallery-img-placeholder" style="object-fit: cover;">
+        <div class="gallery-info">
+          <h4>Commercial Office Complex</h4>
+          <p>This is a placeholder description for the completed project. Describe the location, duration, and key architectural features here.</p>
+        </div>
+      </div>
+
+      <!-- Gallery Item 3 -->
+      <div class="gallery-item">
+        <img src="assets/21.jpg" alt="Modern Apartment Renovation" class="gallery-img-placeholder" style="object-fit: cover;">
+        <div class="gallery-info">
+          <h4>Modern Apartment Renovation</h4>
+          <p>This is a placeholder description for the completed project. Describe the location, duration, and key architectural features here.</p>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 4 -->
+      <div class="gallery-item">
+        <img src="assets/25.jpg" alt="Luxury Resort Construction" class="gallery-img-placeholder" style="object-fit: cover;">
+        <div class="gallery-info">
+          <h4>Luxury Resort Construction</h4>
+          <p>This is a placeholder description for the completed project. Describe the location, duration, and key architectural features here.</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="portfolio.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Featured Project</a>
+  </section>
+
+  <footer>
+    © 2026 Lanka Dream Homes Builders (Pvt) Ltd. All Rights Reserved.
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Featured Project - Lanka Dream Homes Builders</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0b0b0b;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.9);
+      border-bottom: 1px solid rgba(255, 42, 42, 0.2);
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #ff2a2a;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: #ff2a2a;
+    }
+
+    /* Page Header */
+    .page-header {
+      padding: 150px 10% 80px;
+      text-align: center;
+      background: linear-gradient(rgba(10, 0, 0, 0.8), rgba(40, 0, 0, 0.8)), url('idh_builders_bg.jpg') center/cover;
+    }
+
+    .page-header h2 {
+      font-size: 3rem;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-weight: 800;
+      display: inline-block;
+      padding: 15px 30px;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      color: #ddd;
+      margin-top: 20px;
+    }
+
+    /* Content */
+    .content-section {
+      padding: 80px 10%;
+      background: #ffffff;
+      color: #111;
+      min-height: 50vh;
+      text-align: center;
+    }
+
+    .content-section h3 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .content-section>p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 50px;
+    }
+
+    /* Featured Project */
+    .featured-project {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+      background: #fdfdfd;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      border: 1px solid #eee;
+    }
+
+    .featured-image-link {
+      display: block;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .featured-img-placeholder {
+      width: 100%;
+      height: 450px;
+      background: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+      font-size: 1.5rem;
+      transition: transform 0.4s;
+    }
+
+    .featured-image-link:hover .featured-img-placeholder {
+      transform: scale(1.05);
+    }
+
+    .featured-image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(200, 0, 0, 0.0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.4s;
+    }
+
+    .featured-image-link:hover .featured-image-overlay {
+      background: rgba(200, 0, 0, 0.4);
+    }
+
+    .overlay-text {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      opacity: 0;
+      transition: 0.4s;
+      padding: 15px 30px;
+      border: 2px solid white;
+      border-radius: 30px;
+    }
+
+    .featured-image-link:hover .overlay-text {
+      opacity: 1;
+      transform: translateY(-10px);
+    }
+
+    .featured-info {
+      padding: 40px;
+    }
+
+    .featured-info h4 {
+      font-size: 2rem;
+      color: #aa0000;
+      margin-bottom: 20px;
+    }
+
+    .featured-info p {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    /* Back button */
+    .back-btn {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 12px 30px;
+      background: #111;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    .back-btn:hover {
+      background: #ff2a2a;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #050505;
+      color: #666;
+      font-size: 0.9rem;
+      border-top: 1px solid #1a1a1a;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        padding: 15px;
+      }
+
+      nav {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0;
+      }
+
+      .page-header h2 {
+        font-size: 2rem;
+      }
+
+      .featured-img-placeholder {
+        height: 300px;
+      }
+
+      .featured-info {
+        padding: 25px;
+      }
+
+      .featured-info h4 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Lanka Dream Homes Builders (Pvt) Ltd</h1>
+    <nav>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="page-header">
+    <h2>Featured Project</h2>
+    <p>A glimpse into our dedication to excellence.</p>
+  </div>
+
+  <section class="content-section">
+    <h3>Our Latest Masterpiece</h3>
+    <p>Discover the quality and craftsmanship behind our construction.</p>
+
+    <!-- Featured Big Project -->
+    <div class="featured-project">
+
+      <!-- Link that wraps the big image to navigate to the gallery -->
+      <a href="gallery.html" class="featured-image-link">
+        <img src="assets/2.jpg" alt="Modern Luxury Residence" class="featured-img-placeholder" style="object-fit: cover;">
+        <div class="featured-image-overlay">
+          <span class="overlay-text">Click to View All Projects <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <div class="featured-info">
+        <!-- Featured project title -->
+        <h4>Modern Luxury Residence</h4>
+
+        <!-- Featured project description -->
+        <p>Built with passion and precision,
+          utilizing top-tier architectural design and premium construction materials.</p>
+        <p><strong>Click the image above to navigate to our complete gallery of all completed projects.</strong></p>
+      </div>
+    </div>
+
+    <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+  </section>
+
+  <footer>
+    © 2026 Lanka Dream Homes Builders (Pvt) Ltd. All Rights Reserved.
+  </footer>
+
+  <div class="contact-widget">
+    <a href="https://wa.me/94777380125?text=Hello,%20I%20am%20interested%20in%20your%20services." class="widget-whatsapp" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="mailto:lankadreamhomesbuilders.lk@gmail.com?subject=Inquiry%20about%20Services&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services." class="widget-email">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+  </div>
+</body>
+
+</html>
